@@ -48,7 +48,7 @@
      (tomorrow        . "Tom. %H:%M")       ;; Tomorrow
      (this-week       . "%a. %H:%M")        ;; This week
      (this-year       . "%B %d")            ;; This year
-     (other           . "%-d %B '%y"))      ;; Not in the adjacent calendar year
+     (t               . "%-d %B '%y"))      ;; Not in the adjacent calendar year
   
   "Ordered list of (criterion . format) for formating a date difference.
 A numerical criterion means that the date difference expressed in seconds has to be less than the given value. A symbolic criterion means to check for its validity. The format variable can contain the common date formatter and it is complemented by relative difference expressed in minutes %(M), hours %(H), days %(d), weeks %(w), months %(m) and years %(y)."
@@ -245,7 +245,7 @@ A numerical criterion means that the date difference expressed in seconds has to
                     (last-year  . ,(relative-date-is-last-year date now))
                     (this-year  . ,(relative-date-is-this-year date now))
                     (next-year  . ,(relative-date-is-next-year date now))
-                    (other      . t))) ; default if nothing else matched
+                    (t          . t))) ; default if nothing else matched
          (result (format-time-string "%Y-%m-%d" date)))
     
       (catch 'found

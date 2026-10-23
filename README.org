@@ -22,7 +22,7 @@ You need first to define the =relative-date-formats= variable and specify how to
      (tomorrow        . "Tom. %H:%M")       ;; Tomorrow
      (this-week       . "%a. %H:%M")        ;; This week
      (this-year       . "%B %d")            ;; This year
-     (other           . "%-d %B %Y")))      ;; Not in the adjacent calendar year
+     (t               . "%-d %B %Y")))      ;; Not in the adjacent calendar year
 
 #+end_src
 
